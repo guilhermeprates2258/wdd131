@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  nav {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .main-content {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .main-content .main {
+    flex: 3;
+    background-color: #ccc;
+    padding: 20px;
+  }
+  
+  .main-content .aside {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+  }
+  
