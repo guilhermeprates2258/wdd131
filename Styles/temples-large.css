@@ -1,0 +1,138 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header and Footer */
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+footer {
+    font-size: 14px;
+}
+
+/* Navigation */
+nav {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+nav a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: hsl(189, 100%, 64%);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: hsl(189, 100%, 64%);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-out;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Main Content */
+main {
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Container de Imagens Responsivo */
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive Navigation */
+.hamburger {
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none; /* Só aparece em telas menores */
+}
+
+.hamburger-icon {
+    display: inline; /* Mostra o ícone de hambúrguer */
+}
+
+.close-icon {
+    display: none; /* Esconde o "X" por padrão */
+    font-size: 30px;
+    color: white;
+}
+
+/* Exibe o ícone do "X" e esconde o hambúrguer quando o menu está aberto */
+.hamburger.open .hamburger-icon {
+    display: none;
+}
+
+.hamburger.open .close-icon {
+    display: inline; /* Mostra o "X" */
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+}
+
+/* Utility Classes */
+.image-right, .image-left {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.image-right {
+    order: 1;
+}
+
+.image-left {
+    order: -1;
+}
