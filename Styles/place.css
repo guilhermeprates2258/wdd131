@@ -1,0 +1,115 @@
+:root {
+    --primary-color: #009c3b; /* Brazil flag green */
+    --secondary-color: #ffcc29; /* Brazil flag yellow */
+    --font-family: 'Arial', sans-serif;
+    --text-color: #003366; /* Brazil flag blue */
+    --background-color: #f1f1f1;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    flex: 1;
+}
+
+#hero {
+    position: relative;
+}
+
+#hero img {
+    width: 100%;
+    height: 650px;
+    object-fit: cover; /* Remove as bordas brancas ajustando a imagem ao container */
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: -120px auto 40px;
+    padding: 0 10px;
+    max-width: 90%; /* Ajusta a largura dos blocos no wider view */
+    z-index: 1;
+    position: relative;
+}
+
+#data, #weather {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 40%;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+#data:hover, #weather:hover {
+    transform: scale(1.05); /* Efeito de hover para destacar */
+}
+
+#data h2, #weather h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+#data p, #weather p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+#weather {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+#weather .icon::after {
+    content: '☀️'; /* Ícone decorativo para clima */
+    margin-left: 8px;
+    font-size: 1.2em;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .info {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    #data, #weather {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+}

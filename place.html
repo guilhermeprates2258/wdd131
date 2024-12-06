@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="W03 Assignment for WDD131 BYU I">
+    <meta name="author" content="Guilherme Prates Batista">
+    <title>Brazil</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>BRAZIL</h1>
+    </header>
+    <main>
+        <div id="hero">
+            <picture>
+                <source media="(max-width: 500px)" srcset="images\rio.webp">
+                <source media="(max-width: 1000px)" srcset="images\2rio.webp">
+                <img src="images/sugarloaf-mountain-cable-car-sunset.webp" alt="Cristo Redentor" width="1200" height="750">
+            </picture>
+            <div class="info">
+                <div id="data">
+                    <h2>Data</h2>
+                    <p><strong>Area:</strong> 8,514,215 km²</p>
+                    <p><strong>Population:</strong> 215.3 million (2022)</p>
+                    <p><strong>Capital:</strong> Brasília</p>
+                    <p><strong>Languages:</strong> Portuguese</p>
+                    <p><strong>Currency:</strong> Brazilian real (R$)</p>
+                    <p><strong>Time Zone:</strong> Brasília Standard Time (GMT-3)</p>
+                    <p><strong>Calling Code:</strong> +55</p>
+                    <p><strong>Internet TLD:</strong> .br</p>
+                </div>
+                <div id="weather">
+                    <h2>Weather <span class="icon"></span></h2>
+                    <p><strong>Temperature:</strong> 8° C</p>
+                    <p><strong>Conditions:</strong> Sunny</p>
+                    <p><strong>Wind:</strong> 4.9 km/h</p>
+                    <p><strong>Wind Chill:</strong> <span id="windchill">N/A</span></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentYear"></span> 🤙 Guilherme Prates - Paraná, Brazil 🤙</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
