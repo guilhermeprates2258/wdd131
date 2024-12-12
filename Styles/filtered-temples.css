@@ -1,0 +1,21 @@
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    /* Menu escondido por padrão em telas pequenas */
+    #nav-menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    /* Exibe o menu quando a classe 'show' é aplicada */
+    #nav-menu.show {
+        display: flex;
+    }
+
+    /* Exibe o ícone de hambúrguer somente em telas menores */
+    .hamburger {
+        display: inline-block;
+    }
+}
