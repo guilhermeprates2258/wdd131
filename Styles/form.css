@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+  }
+  
+  label, legend {
+    font-weight: bold;
+    margin-top: 1rem;
+    display: block;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Adicionando flexbox para exibir as estrelas em uma linha */
+  .rating {
+    display: flex;  /* Usando flexbox para exibir as estrelas em linha */
+    justify-content: center;  /* Alinhando as estrelas ao centro */
+  }
+  
+  .rating input {
+    display: none;  /* Ocultando os inputs para que apenas as labels (estrelas) sejam visíveis */
+  }
+  
+  .rating label {
+    font-size: 2rem;
+    cursor: pointer;
+    color: gray;  /* Cor padrão das estrelas */
+    margin: 0 5px;  /* Espaçamento entre as estrelas */
+  }
+  
+  /* Estrelas douradas quando selecionadas */
+  .rating input:checked ~ label {
+    color: gold;
+  }
+  
+  /* Estrelas douradas ao passar o mouse */
+  .rating label:hover,
+  .rating label:hover ~ label {
+    color: gold;
+  }
+  
+  /* Corrigindo a exibição das caixas de seleção em linha para Useful Features */
+  .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;  /* Permite que as caixas de seleção se ajustem em várias linhas, se necessário */
+    gap: 10px;  /* Espaçamento entre as caixas de seleção */
+  }
+  
+  .checkbox-group input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  

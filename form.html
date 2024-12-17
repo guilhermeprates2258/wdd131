@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review Form</title>
+  <link rel="stylesheet" href="Styles/form.css">
+</head>
+<body>
+  <header>
+    <h1>Product Review Form</h1>
+  </header>
+  
+  <main>
+    <form id="reviewForm" method="get" action="review.html">
+      <!-- Product Name -->
+      <label for="productName">Product Name</label>
+      <select id="productName" name="productName" required>
+        <option value="" disabled selected>Select a Product ...</option>
+        <!-- Options dynamically populated by JS -->
+      </select>
+      
+      <!-- Overall Rating -->
+      <fieldset>
+        <legend>Overall Rating</legend>
+        <div class="rating">
+          <input type="radio" id="star5" name="rating" value="5" required>
+          <label for="star5">&#9733;</label>
+          <input type="radio" id="star4" name="rating" value="4">
+          <label for="star4">&#9733;</label>
+          <input type="radio" id="star3" name="rating" value="3">
+          <label for="star3">&#9733;</label>
+          <input type="radio" id="star2" name="rating" value="2">
+          <label for="star2">&#9733;</label>
+          <input type="radio" id="star1" name="rating" value="1">
+          <label for="star1">&#9733;</label>
+        </div>
+      </fieldset>
+      
+      <!-- Date of Installation -->
+      <label for="installationDate">Date of Installation</label>
+      <input type="date" id="installationDate" name="installationDate" required>
+      
+      <!-- Useful Features -->
+      <fieldset>
+        <legend>Which features did you find useful in the product?</legend>
+        <div class="checkbox-group">
+          <label for="feature1">
+            <input type="checkbox" id="feature1" name="features" value="Durability"> Durability
+          </label>
+          <label for="feature2">
+            <input type="checkbox" id="feature2" name="features" value="Ease of Use"> Ease of Use
+          </label>
+          <label for="feature3">
+            <input type="checkbox" id="feature3" name="features" value="Performance"> Performance
+          </label>
+          <label for="feature4">
+            <input type="checkbox" id="feature4" name="features" value="Design"> Design
+          </label>
+        </div>
+      </fieldset>
+      
+      <!-- Written Review -->
+      <label for="review">Written Review</label>
+      <textarea id="review" name="review" rows="5" placeholder="Write your review here..."></textarea>
+      
+      <!-- User Name -->
+      <label for="userName">Your Name</label>
+      <input type="text" id="userName" name="userName" placeholder="Enter your name">
+      
+      <!-- Submit Button -->
+      <input type="submit" value="Submit Review">
+    </form>
+  </main>
+  
+  <footer>
+    <p id="copyright">© 2024 Guilherme P. Batista</p>
+    <p id="last-modified"></p>
+  </footer>
+  
+  <script src="scripts/form.js"></script>
+</body>
+</html>
